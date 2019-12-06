@@ -48,6 +48,7 @@ database.ref().on("child_added", function (childSnapshot) {
     // store difference between currentTime and fisrt train converted in a variable.
     var timeDiff = moment().diff(moment(firstTimeConverted), "minutes");
     console.log(firstTrain);
+    console.log("Difference in Time: " + timeDiff);
     // find Remainder of the time left and store in a variable
     var timeRemainder = timeDiff % frequency;
     console.log(timeRemainder);
